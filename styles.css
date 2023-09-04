@@ -1,0 +1,120 @@
+/* VARIABLES */
+:root {
+  --font-color1: rgb(243, 243, 243);
+}
+
+/* BASICS */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--font-color1);
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: var(--font-color1);
+}
+
+/* HEADER */
+header {
+  background-color: transparent;
+  color: white;
+  padding: 1em;
+  position: fixed;
+  /* Låser headern i ovankant */
+  top: 0;
+  /* Övre kant av skärmen */
+  width: 100%;
+  /* Full bredd */
+  z-index: 1;
+  /* Överlagring för att säkerställa att headern ligger ovanpå andra element */
+}
+
+/* NAVBAR */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* MAIN */
+main {
+  display: grid;
+  /*antal sektioner, höjd per sektion*/
+  grid-template-rows: repeat(6, 100vh);
+  /* gap: 1em; */
+}
+
+/* SECTIONS */
+section {
+  padding: 10em 10%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* SECTION - HERO ALIGN */
+.hero-align {
+  align-items: start;
+  font-size: 80px;
+}
+
+/* SECTION - LEFT ALIGN */
+.left-align {
+  justify-items: start;
+}
+
+/* SECTION - RIGHT ALIGN */
+.right-align {
+  justify-items: end;
+}
+
+/* SECTION CONTENT */
+.section-content {
+  display: grid;
+  grid-template-columns: auto;
+  width: 20rem;
+}
+
+#hem {
+  background-image: url(/img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 30px;
+}
+
+#om-oss {
+  background-color: rgb(67, 94, 104);
+}
+
+#lokalerna {
+  background-color: rgb(94, 94, 94);
+}
+
+#kostnad {
+  background-color: rgb(86, 109, 86);
+}
+
+#projektet {
+  background-color: rgb(122, 122, 70);
+}
+
+#kontakt {
+  background-color: rgb(128, 83, 89);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
