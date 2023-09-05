@@ -1,6 +1,15 @@
 /* VARIABLES */
 :root {
   --font-color1: rgb(243, 243, 243);
+  --bg-color1: #8DAA91;
+  --bg-color2: #788475;
+  --bg-color3: #5E5D5C;
+  --bg-color4: #453643;
+  --bg-color5: #28112B;
+  --bg-color5: #1f1f1f;
+  --accent-color: #1d7c3d;
+
+
 }
 
 /* BASICS */
@@ -22,20 +31,21 @@ a {
 
 /* HEADER */
 header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   color: white;
-  padding: 1em;
+  padding: 0em;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+  /* border-top: 10px solid var(--accent-color); */
 }
 
 /* NAVBAR */
 nav ul {
   list-style-type: none;
-  margin: 0;
-  /* padding: 50px; */
+  margin: 0px;
+  padding: 10px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +74,7 @@ nav ul {
 main {
   display: grid;
   /*antal sektioner, höjd per sektion*/
-  grid-template-rows: repeat(6, 100vh);
+  grid-template-rows: 110vh repeat(5, 100vh);
   /* gap: 1em; */
 }
 
@@ -97,9 +107,13 @@ section {
   display: grid;
   grid-template-columns: auto;
   width: 20rem;
+  /* background-image: linear-gradient(145deg, #00000010, #00000000, #00000000); */
+  padding: 15px;
+  /* border-top: 8px solid var(--accent-color); */
 }
 
 #hem {
+  position: relative;
   background-image: url(img/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -107,24 +121,38 @@ section {
   font-size: 30px;
 }
 
+#hem::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, #00000000, var(--bg-color1));
+}
+
 #om-oss {
-  background-color: rgb(67, 94, 104);
+  /* background-color: rgb(67, 94, 104); */
+  background-color: var(--bg-color1);
 }
 
 #lokalerna {
-  background-color: rgb(94, 94, 94);
+  /* background-color: rgb(94, 94, 94); */
+  background-color: var(--bg-color2);
 }
 
 #kostnad {
-  background-color: rgb(86, 109, 86);
+  /* background-color: rgb(86, 109, 86); */
+  background-color: var(--bg-color3);
 }
 
 #projektet {
-  background-color: rgb(122, 122, 70);
+  /* background-color: rgb(122, 122, 70); */
+  background-color: var(--bg-color4);
 }
 
 #kontakt {
-  background-color: rgb(128, 83, 89);
+  /* background-color: rgb(128, 83, 89); */
+  background-color: var(--bg-color5);
 }
 
 /* Footer */
