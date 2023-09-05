@@ -22,29 +22,43 @@ a {
 
 /* HEADER */
 header {
-  /* background-color: transparent; */
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
   color: white;
   padding: 1em;
   position: fixed;
-  /* Låser headern i ovankant */
   top: 0;
-  /* Övre kant av skärmen */
   width: 100%;
-  /* Full bredd */
   z-index: 1;
-  /* Överlagring för att säkerställa att headern ligger ovanpå andra element */
 }
 
 /* NAVBAR */
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  /* padding: 50px; */
   display: flex;
-  justify-content: space-evenly;
-  /* text-shadow: 0px 1px rgba(0, 0, 0, 0.3); */
+  justify-content: space-between;
+  align-items: center;
 }
+
+.nav-logo {
+  margin-right: 20px;
+  padding: 10px;
+  flex-grow: 3;
+}
+
+.nav-item {
+  margin: 0 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+/* LOGO */
+.nav-logo img {
+  width: 100px;
+  height: auto;
+}
+
 
 /* MAIN */
 main {
